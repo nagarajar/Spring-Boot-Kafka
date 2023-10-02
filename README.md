@@ -1,4 +1,4 @@
-# kafka-producer-Consumer-example
+# Kafka Producer and Consumer Example
 
 ## Open Source Kafka Startup in local ##
 
