@@ -5,4 +5,11 @@ spring:
   kafka:
     consumer:
       bootstrap-servers: localhost:9092
-      group-id: group-02
+      group-id: group-03
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted: 
+              packages: com.app.kafka.dto #you can give * to include all packages
