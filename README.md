@@ -54,13 +54,17 @@
 1. Send the message as pathvariable
 
     ```GetMapping : "/producer-app/publish/{message}"```
+   
     ```GET: http://localhost:8181/producer-app/publish/user```
 
-2. Send the customer as request body
+3. Send the customer as request body
 
     ```PostMapping : "/producer-app/publish"```
+   
     ```POST: http://localhost:8181/producer-app/publish```
+   
     Body:
+   
     ```{
             "id":103,
             "name":"Ranga",
