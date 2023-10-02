@@ -1,6 +1,4 @@
-# kafka-producer-example
-
-# documents
+# kafka-producer-Consumer-example
 
 ## Open Source Kafka Startup in local ##
 
@@ -34,14 +32,11 @@
 
     ``` bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic NewTopic ```
 
-
-
 6. Produce message
 
     ```sh bin/kafka-console-producer.sh --broker-list localhost:9092 --topic NewTopic```
 
     ```bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic NewTopic```
-
 
 7. consume message
 
