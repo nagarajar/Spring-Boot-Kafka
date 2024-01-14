@@ -61,12 +61,15 @@
     ```PostMapping : "/producer-app/publish"```
     ```POST: http://localhost:8181/producer-app/publish```
     Body:
-    ```{
-            "id":103,
-            "name":"Ranga",
-            "email": "ranga123@gmail.com",
-            "phoneNum":"12365499877"
-        }```
+   
+    ```
+    {
+        "id":103,
+        "name":"Ranga",
+        "email": "ranga123@gmail.com",
+        "phoneNum":"12365499877"
+    }
+    ```
 
 
 # kafka-installation using Docker Container
