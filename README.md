@@ -1,6 +1,4 @@
-# kafka-producer-example
-
-# documents
+# Kafka Producer and Consumer Example
 
 ## Open Source Kafka Startup in local
 
@@ -30,16 +28,22 @@
 
 5. Describe topics
 
+<<<<<<< HEAD
    `sh bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic NewTopic`
 
    `bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic NewTopic`
 
+=======
+>>>>>>> 2ad514cc2d84dcf4329900e7d9367471e63c4a44
 6. Produce message
 
    `sh bin/kafka-console-producer.sh --broker-list localhost:9092 --topic NewTopic`
 
+<<<<<<< HEAD
    `bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic NewTopic`
 
+=======
+>>>>>>> 2ad514cc2d84dcf4329900e7d9367471e63c4a44
 7. consume message
 
    `sh bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic NewTopic --from-beginning`
@@ -50,11 +54,18 @@
 
 1. Send the message as pathvariable
 
+<<<<<<< HEAD
    `GetMapping : "/producer-app/publish/{message}"`
    `GET: http://localhost:8181/producer-app/publish/user`
+=======
+    ```GetMapping : "/producer-app/publish/{message}"```
+   
+    ```GET: http://localhost:8181/producer-app/publish/user```
+>>>>>>> 2ad514cc2d84dcf4329900e7d9367471e63c4a44
 
-2. Send the customer as request body
+3. Send the customer as request body
 
+<<<<<<< HEAD
    `PostMapping : "/producer-app/publish"`
    `POST: http://localhost:8181/producer-app/publish`
    Body:
@@ -108,3 +119,19 @@
 ### Start consumer app (CLI)
 
 `kafka-console-consumer.sh --topic quickstart --from-beginning --bootstrap-server localhost:9092`
+=======
+    ```PostMapping : "/producer-app/publish"```
+   
+    ```POST: http://localhost:8181/producer-app/publish```
+   
+    Body:
+   
+    ```
+        {
+            "id":103,
+            "name":"Ranga",
+            "email": "ranga123@gmail.com",
+            "phoneNum":"12365499877"
+        }
+    ```
+>>>>>>> 2ad514cc2d84dcf4329900e7d9367471e63c4a44
