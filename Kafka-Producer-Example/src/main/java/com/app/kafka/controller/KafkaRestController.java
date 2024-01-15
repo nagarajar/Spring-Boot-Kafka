@@ -1,5 +1,10 @@
 package com.app.kafka.controller;
 
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +42,18 @@ public class KafkaRestController {
 		try {
 			kafkaMessagePublisher.sendCustomerObjToTopic(customer);
 			return ResponseEntity.ok("customer published successfully ...........!");
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+	}
+	
+	@PostMapping("/publish/map")
+	public ResponseEntity<?> publishCustomerObjMap(@RequestBody Customer customer) {
+		try {
+			Map<String, List<Customer>> customerMap = new LinkedHashMap<>();
+			customerMap.put(customer.getName(), Arrays.asList(customer));
+			kafkaMessagePublisher.sendCustomerObjMapToTopic(customerMap);
+			return ResponseEntity.ok("customer Map published successfully ...........!");
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
