@@ -1,7 +1,8 @@
 # kafka-producer-example
 ## Description: 
 In this hands-on project, I gained practical Kafka experience by seamlessly integrating it with Spring Boot, configuring both producer and consumer components using YAML and Java. This hands-on endeavor deepened my understanding of key Kafka concepts like Zookeeper, Kafka Server, Producers, and Consumers. Before integration, I thoroughly explored Kafka's functionalities through a local setup, mastering the end-to-end workflow with topics, consumer groups, and serializers/de-serializers for seamless data   transmission.
-Technologies: Java, Spring Boot, Rest API and Spring Apache Kafka.
+### Technologies: 
+Java, Spring Boot, Rest API and Spring Apache Kafka.
 
 # documents
 
